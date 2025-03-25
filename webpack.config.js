@@ -5,12 +5,12 @@ module.exports = {
   mode: 'development',
   entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path:path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
       {
-        test: /\.?js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -18,6 +18,14 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
+      },
+      // Add this rule to handle CSS files
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader', // Injects styles into the DOM
+          'css-loader'    // Resolves CSS imports
+        ]
       },
     ]
   },
