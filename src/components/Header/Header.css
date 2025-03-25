@@ -18,13 +18,14 @@ header {
   width: 100%;
 }
 
-/* Navigation Items */
 .nav-items {
   display: flex;
   gap: 40px;
+  /* Equal gap between items */
   list-style: none;
   flex-grow: 2;
   justify-content: center;
+  /* Center the menu items */
 }
 
 .nav-items li {
@@ -42,7 +43,7 @@ header {
   color: var(--red-color);
 }
 
-/* Search and CTA Button */
+/* Search icon and button */
 .nav-actions {
   display: flex;
   gap: 40px;
@@ -53,6 +54,11 @@ header {
 .search a {
   text-decoration: none;
   font-size: 24px;
+}
+
+.cta-button-container {
+  display: flex;
+  align-items: center;
 }
 
 .cta-button {
@@ -66,13 +72,54 @@ header {
   transition: background-color 0.3s ease;
 }
 
-/* Mobile Menu Styles */
+.cta-button:hover {
+  background-color: var(--red-color);
+}
+
+/* Mobile Styles */
 .menu-icon {
   display: none;
+  /* Default hidden on large screens */
   font-size: 30px;
   cursor: pointer;
 }
 
+.nav-menu {
+  display: flex;
+  /* Always display menu in large screens */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-menu.open {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.63);
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile Menu Styles */
 .backdrop {
   display: none;
   position: fixed;
@@ -119,7 +166,24 @@ header {
   color: var(--black-color);
 }
 
+.mobile-nav .nav-items {
+  margin-top: 60px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-nav .nav-actions {
+  margin-top: 40px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
 @media (max-width: 850px) {
+  .logo img {
+    width: 176px;
+  }
+
   .nav-menu {
     display: none;
   }
@@ -127,8 +191,6 @@ header {
   .menu-icon {
     display: block;
   }
+  
 
-  .logo img {
-    width: 176px;
-  }
 }
