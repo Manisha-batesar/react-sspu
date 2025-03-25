@@ -1,54 +1,66 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import headerLogo from '../assets/icon1.png';
-import { useRef } from 'react';
 
 const Header = () => {
-  const menuIconRef = useRef(null);
-  const navMenuRef = useRef(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   useEffect(() => {
-    const menuIcon = menuIconRef.current;
-    const navMenu = navMenuRef.current;
-    
-    const toggleMenu = () => {
-      navMenu.classList.toggle('open');
-    };
-
     const handleResize = () => {
       if (window.innerWidth > 850) {
-        navMenu.classList.remove('open');
+        setIsMobileMenuOpen(false);
       }
     };
 
-    menuIcon.addEventListener('click', toggleMenu);
     window.addEventListener('resize', handleResize);
-
-    return () => {
-      menuIcon.removeEventListener('click', toggleMenu);
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
-  return (
-    <header>
-    <div class="logo">
-      <img src={headerLogo} alt="Logo" />
-    </div>
-    <nav class="nav-menu" ref={navMenuRef}>
-      <ul class="nav-items">
-        <li><a href="#">Item1</a></li>
-        <li><a href="#">Item2</a></li>
-        <li><a href="#">Item3</a></li>
-        <li><a href="#">Item4</a></li>
-      </ul>
-      <ul class="nav-actions">
-        <li class="search"><a href="#">🔍</a></li>
-        <li class="cta-button-container"><button class="cta-button">Enroll Now</button></li>
-      </ul>
-    </nav>
-    <div class="menu-icon" id="menu-icon" ref={menuIconRef}>☰</div>
-  </header>
-  )
-}
 
-export default Header
+  return (
+    <>
+      <header>
+        <div className="logo">
+          <img src={headerLogo} alt="Logo" />
+        </div>
+        <nav className="nav-menu">
+          <ul className="nav-items">
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+            <li><a href="#">Item4</a></li>
+          </ul>
+          <ul className="nav-actions">
+            <li className="search"><a href="#">🔍</a></li>
+            <li className="cta-button-container">
+              <button className="cta-button">Enroll Now</button>
+            </li>
+          </ul>
+        </nav>
+        <div className="menu-icon" onClick={toggleMobileMenu}>☰</div>
+      </header>
+
+      {/* Mobile Navigation */}
+      <div className={`backdrop ${isMobileMenuOpen ? 'show' : ''}`} onClick={toggleMobileMenu}></div>
+      <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+        <button className="close-btn" onClick={toggleMobileMenu}>×</button>
+        <ul className="nav-items">
+          <li><a href="#">Item1</a></li>
+          <li><a href="#">Item2</a></li>
+          <li><a href="#">Item3</a></li>
+          <li><a href="#">Item4</a></li>
+        </ul>
+        <ul className="nav-actions">
+          <li className="search"><a href="#">🔍</a></li>
+          <li className="cta-button-container">
+            <button className="cta-button">Enroll Now</button>
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
+};
+
+export default Header;
