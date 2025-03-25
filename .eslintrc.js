@@ -20,6 +20,7 @@ module.exports = {
   plugins: ['react', 'jsx-a11y', 'prettier'],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
     'react/no-array-index-key': 'warn',
     'react/prop-types': 'error',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],

@@ -45,19 +45,35 @@ const Header = () => {
               <a href="#">🔍</a>
             </li>
             <li className="cta-button-container">
-              <button className="cta-button">Enroll Now</button>
+              <button className="cta-button" type="button">
+                Enroll Now
+              </button>
             </li>
           </ul>
         </nav>
-        <div className="menu-icon" onClick={toggleMobileMenu}>
+        <button
+          className="menu-icon"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+          type="button"
+        >
           ☰
-        </div>
+        </button>
       </header>
 
       {/* Mobile Navigation */}
-      <div className={`backdrop ${isMobileMenuOpen ? 'show' : ''}`} onClick={toggleMobileMenu} />
+      <div
+        className={`backdrop ${isMobileMenuOpen ? 'show' : ''}`}
+        onClick={toggleMobileMenu}
+        onKeyDown={e => {
+          if (e.key === 'Enter' || e.key === ' ') toggleMobileMenu();
+        }}
+        role="button"
+        tabIndex={0}
+        aria-label="Close mobile menu"
+      />
       <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
-        <button className="close-btn" onClick={toggleMobileMenu}>
+        <button className="close-btn" onClick={toggleMobileMenu} type="button">
           ×
         </button>
         <ul className="nav-items">
@@ -79,7 +95,9 @@ const Header = () => {
             <a href="#">🔍</a>
           </li>
           <li className="cta-button-container">
-            <button className="cta-button">Enroll Now</button>
+            <button className="cta-button" type="button">
+              Enroll Now
+            </button>
           </li>
         </ul>
       </nav>

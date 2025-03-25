@@ -25,7 +25,7 @@ const Courses = () => (
             <br />
             et dolore magna aliqua.{' '}
           </p>
-          <button>
+          <button type="button">
             Enroll now <span>→</span>
           </button>
         </div>
