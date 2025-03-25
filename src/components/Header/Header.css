@@ -79,6 +79,8 @@ header {
 /* Mobile Styles */
 .menu-icon {
   display: none;
+  border: none;
+  background-color: transparent;
   /* Default hidden on large screens */
   font-size: 30px;
   cursor: pointer;
@@ -157,11 +159,11 @@ header {
 
 .mobile-nav .close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 12px;
+  right: 35px;
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 30px;
   cursor: pointer;
   color: var(--black-color);
 }

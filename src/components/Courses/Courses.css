@@ -54,7 +54,7 @@
   border-radius: 40px;
   border: 2px solid var(--white-color);
   margin-left: 10px;
-  padding: 2px;
+  padding: 1px 3px 1px 3px;
 }
 
 .courses {
