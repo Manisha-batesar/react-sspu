@@ -3,9 +3,7 @@ import './Testimonial.css';
 
 const Testimonial = () => 
 <div>
-<div className="testimonial">
-  
-</div>
+<div className="testimonial" />
   
   </div>;
 
