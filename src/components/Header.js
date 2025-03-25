@@ -27,33 +27,57 @@ const Header = () => {
         </div>
         <nav className="nav-menu">
           <ul className="nav-items">
-            <li><a href="#">Item1</a></li>
-            <li><a href="#">Item2</a></li>
-            <li><a href="#">Item3</a></li>
-            <li><a href="#">Item4</a></li>
+            <li>
+              <a href="#">Item1</a>
+            </li>
+            <li>
+              <a href="#">Item2</a>
+            </li>
+            <li>
+              <a href="#">Item3</a>
+            </li>
+            <li>
+              <a href="#">Item4</a>
+            </li>
           </ul>
           <ul className="nav-actions">
-            <li className="search"><a href="#">🔍</a></li>
+            <li className="search">
+              <a href="#">🔍</a>
+            </li>
             <li className="cta-button-container">
               <button className="cta-button">Enroll Now</button>
             </li>
           </ul>
         </nav>
-        <div className="menu-icon" onClick={toggleMobileMenu}>☰</div>
+        <div className="menu-icon" onClick={toggleMobileMenu}>
+          ☰
+        </div>
       </header>
 
       {/* Mobile Navigation */}
-      <div className={`backdrop ${isMobileMenuOpen ? 'show' : ''}`} onClick={toggleMobileMenu}></div>
+      <div className={`backdrop ${isMobileMenuOpen ? 'show' : ''}`} onClick={toggleMobileMenu} />
       <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
-        <button className="close-btn" onClick={toggleMobileMenu}>×</button>
+        <button className="close-btn" onClick={toggleMobileMenu}>
+          ×
+        </button>
         <ul className="nav-items">
-          <li><a href="#">Item1</a></li>
-          <li><a href="#">Item2</a></li>
-          <li><a href="#">Item3</a></li>
-          <li><a href="#">Item4</a></li>
+          <li>
+            <a href="#">Item1</a>
+          </li>
+          <li>
+            <a href="#">Item2</a>
+          </li>
+          <li>
+            <a href="#">Item3</a>
+          </li>
+          <li>
+            <a href="#">Item4</a>
+          </li>
         </ul>
         <ul className="nav-actions">
-          <li className="search"><a href="#">🔍</a></li>
+          <li className="search">
+            <a href="#">🔍</a>
+          </li>
           <li className="cta-button-container">
             <button className="cta-button">Enroll Now</button>
           </li>
