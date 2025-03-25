@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import personRaisedHand from '../assets/logo-4.png';
 import jobLogo from '../assets/logo-5.png';
 import SchoolLogo from '../assets/logo-3.png';
@@ -8,12 +8,12 @@ import schoolLogo from '../assets/logo-8.png';
 
 const WhyChooseUs = () => {
   const logos = [
-    { img: personRaisedHand, title: "Expert Faculty" },
-    { img: jobLogo, title: "Job Placement" },
-    { img: SchoolLogo, title: "Modern Facilities" },
-    { img: toolBox, title: "Practical Training" },
-    { img: timeLogo, title: "Flexible Schedule" },
-    { img: schoolLogo, title: "Industry Partners" }
+    { img: personRaisedHand, title: 'Expert Faculty' },
+    { img: jobLogo, title: 'Job Placement' },
+    { img: SchoolLogo, title: 'Modern Facilities' },
+    { img: toolBox, title: 'Practical Training' },
+    { img: timeLogo, title: 'Flexible Schedule' },
+    { img: schoolLogo, title: 'Industry Partners' },
   ];
 
   return (
@@ -21,11 +21,13 @@ const WhyChooseUs = () => {
       <div className="why-choose-us">
         <div className="why-choose-us-content">
           <h2>Why Choose Us ?</h2>
-          <p>Choose Symbiosis Skills & Professional
-            University for industry-aligned programs, expert faculty with global experience, state-of-the-art
-            labs, and hands-on training that prepares you for a successful career in the rapidly growing
-            nutrition and wellness sector.</p>
-          
+          <p>
+            Choose Symbiosis Skills & Professional University for industry-aligned programs, expert
+            faculty with global experience, state-of-the-art labs, and hands-on training that
+            prepares you for a successful career in the rapidly growing nutrition and wellness
+            sector.
+          </p>
+
           <div className="logo-grid">
             {logos.map((logo, index) => (
               <div key={index} className="logo-item">
@@ -37,8 +39,7 @@ const WhyChooseUs = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default WhyChooseUs
-
+export default WhyChooseUs;
