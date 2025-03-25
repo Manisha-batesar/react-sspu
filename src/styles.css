@@ -1,3 +1,6 @@
+
+
+
 :root {
   --red-color: red;
   --black-color: black;
@@ -5,10 +8,13 @@
   --gray-color: rgba(171, 171, 171, 1);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
 }
 
 body {
@@ -21,7 +27,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 5px 30px;
   background-color: var(--white-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -39,10 +45,12 @@ header {
 
 .nav-items {
   display: flex;
-  gap: 40px; /* Equal gap between items */
+  gap: 40px;
+  /* Equal gap between items */
   list-style: none;
   flex-grow: 2;
-  justify-content: center; /* Center the menu items */
+  justify-content: center;
+  /* Center the menu items */
 }
 
 .nav-items li {
@@ -95,13 +103,15 @@ header {
 
 /* Mobile Styles */
 .menu-icon {
-  display: none; /* Default hidden on large screens */
+  display: none;
+  /* Default hidden on large screens */
   font-size: 30px;
   cursor: pointer;
 }
 
 .nav-menu {
-  display: flex; /* Always display menu in large screens */
+  display: flex;
+  /* Always display menu in large screens */
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -127,6 +137,7 @@ header {
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -137,48 +148,131 @@ header {
 
 /* home section css */
 
-.home img{
+.home img {
   width: 100%;
-  height: auto;
-  position: absolute;
+  height: 600px;
+  object-fit: cover;
+  position: relative;
 }
 
-.home{
-  .cards{
-    display: flex;
-  }
-  .home-card{
-    top: 700px;
-    position: relative;
-    background-color:rgba(255, 255, 255, 1);
-    height: auto;
-    width: 363px;
-    border-radius: 11px;
-    height: 584px;
-    margin-left:85px ;
-    padding: 50px 50px 10px 50px;
-    box-shadow: 0px 1px 110px 62px rgb(228, 235, 237);
-    margin-bottom: 30px;
-    
+.home-content {
+  display: none;
+  padding-left: 40px;
+  position: absolute;
+  top: 100px;
+  gap: 30px;
+  width: 100%;
+  max-width: 500px;
 
-    h3{
+
+
+  h2 {
+    font-size: 20px;
+    line-height: 100%;
+    left: 40px;
+    color: var(--white-color);
+    padding-bottom: 20px;
+
+    span {
+      font-size: 16px;
+      font-weight: 100;
+      color: var(--white-color);
+    }
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 192%;
+    padding-bottom: 20px;
+    color: var(--white-color);
+  }
+
+  button {
+    width: 166px;
+    background-color: var(--red-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+
+
+
+    span {
+      font-size: 14px;
+      line-height: 100%;
+      font-weight: bolder;
+      border-radius: 40px;
+      border: 2px solid var(--white-color);
+      margin-left: 10px;
+      padding: 2px;
+    }
+  }
+
+}
+
+/* courses section css */
+
+.courses {
+  margin-top: -70px;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 25px;
+
+  .cards {
+    display: flex;
+    gap: 30px;
+    padding: 30px 10px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .home-card {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    min-width: 250px;
+    border-radius: 11px;
+    padding: 50px 50px 60px 50px;
+    box-shadow: 0px 0px 20px 14px rgb(228, 235, 237);
+
+
+
+    h3 {
       font-size: 24px;
       line-height: 100%;
       font-weight: 800;
       padding-bottom: 30px;
     }
-    p{
+
+    p {
       line-height: 192%;
       font-size: 16px;
       font-weight: 400;
     }
 
-    span img{
+    img {
       width: 30px;
+      height: 30px;
       margin-top: 20px;
-      right: 50px;
+     margin-left: auto;
     }
   }
+}
+
+.why-choose-us{
+  margin-top: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+
+  h2{
+    padding-bottom: 40px;
+    
+  }
+
 }
 
 
@@ -216,17 +310,27 @@ header {
 
 
 @media (max-width: 850px) {
+
+  .home-content {
+    display: block;
+  }
+  .cards{
+  overflow: auto;
+  }
+
   .logo img {
     width: 176px;
   }
 
   .nav-menu {
-    display: none; /* Hide nav by default on mobile */
+    display: none;
+    /* Hide nav by default on mobile */
     width: 100%;
   }
 
   .nav-menu.open {
-    display: flex; /* Show nav when open on mobile */
+    display: flex;
+    /* Show nav when open on mobile */
     flex-direction: column;
     gap: 15px;
     align-items: center;
@@ -245,6 +349,9 @@ header {
   }
 
   .menu-icon {
-    display: block; /* Show menu icon only on mobile */
+    display: block;
+    /* Show menu icon only on mobile */
   }
+
+
 }
