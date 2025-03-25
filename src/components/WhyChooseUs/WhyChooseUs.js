@@ -1,10 +1,11 @@
 import React from 'react';
-import personRaisedHand from '../assets/logo-4.png';
-import jobLogo from '../assets/logo-5.png';
-import SchoolLogo from '../assets/logo-3.png';
-import toolBox from '../assets/logo-6.png';
-import timeLogo from '../assets/logo-7.png';
-import schoolLogo from '../assets/logo-8.png';
+import personRaisedHand from '../../assets/logo-4.png';
+import jobLogo from '../../assets/logo-5.png';
+import SchoolLogo from '../../assets/logo-3.png';
+import toolBox from '../../assets/logo-6.png';
+import timeLogo from '../../assets/logo-7.png';
+import schoolLogo from '../../assets/logo-8.png';
+import './WhyChooseUs.css';
 
 const WhyChooseUs = () => {
   const logos = [

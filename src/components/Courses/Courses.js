@@ -1,7 +1,8 @@
 import React from 'react';
-import beautyIcon from '../assets/logo-1.png';
-import geneticsIcon from '../assets/logo-2.png';
-import schoolIcon from '../assets/logo-3.png';
+import beautyIcon from '../../assets/logo-1.png';
+import geneticsIcon from '../../assets/logo-2.png';
+import schoolIcon from '../../assets/logo-3.png';
+import './Courses.css';
 
 const Courses = () => (
   <div>
