@@ -1,9 +1,9 @@
 import React from 'react';
- import testimonialimg1 from '../../assets/testimonial1.png';
- import testimonialimg2 from '../../assets/testimonial2.png';
- import testimonialimg3 from '../../assets/testimonial3.png';
- import testimonialimg4 from '../../assets/testimonial4.png';
- import testimonialimg5 from '../../assets/testimonial5.png';
+import testimonialimg1 from '../../assets/testimonial1.png';
+import testimonialimg2 from '../../assets/testimonial2.png';
+import testimonialimg3 from '../../assets/testimonial3.png';
+import testimonialimg4 from '../../assets/testimonial4.png';
+import testimonialimg5 from '../../assets/testimonial5.png';
 
 import './Testimonial.css';
 import EmblaCarousel from '../Common/EmblaCarousel/EmblaCarousel';
@@ -22,29 +22,29 @@ so that we won’t lose our track and continue our work and the faculties are al
 support and help the students out …… Thank you.`
 
 const cards = [
-  { img: testimonialimg1,reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
-  { img: testimonialimg2,reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
-  { img: testimonialimg3, reviewContent,title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
-  { img: testimonialimg4,reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
-  { img: testimonialimg5,reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
+  { reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
+  { reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
+  { reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
+  { reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
+  { reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
 ]
 
-const ReviewCardItem = ({review, title}) => {
-return  <div className='cardDiv'>
-<p> {review}</p>
-<br/>
- <span>{title}</span>
-</div>
+const ReviewCardItem = ({ review, title }) => {
+  return <div className='cardDiv'>
+    <p> {review}</p>
+    <br />
+    <span>{title}</span>
+  </div>
 }
 
-const Testimonial = () => { 
+const carouselSlides = cards.map((card, index) => {
+  return (
+    <ReviewCardItem key={index} review={card.reviewContent} title={card.title}
+    />
+  )
+});
+const Testimonial = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
-  const carouselSlides = cards.map((card, index) => {
-    return (
-      <ReviewCardItem key={index} review={card.reviewContent} title={card.title}
-      />
-    )
-  });
 
   const onSlideChange = (emblaApi) => {
     const inViewSlides = emblaApi.slidesInView();
@@ -54,8 +54,8 @@ const Testimonial = () => {
 
   return (
     <section className='reviewContainer'>
-     <EmblaCarousel options={{ direction: 'rtl', loop: true  }} slides={carouselSlides} onSlideChange={onSlideChange}/>
-      <img src={testimonialImages[currentSlideIndex]} alt="testimonial" className='imgDiv'/>
+      <EmblaCarousel options={{ direction: 'rtl', loop: true }} slides={carouselSlides} onSlideChange={onSlideChange} />
+      <img src={testimonialImages[currentSlideIndex]} alt="testimonial" className='imgDiv' />
     </section>
   )
 }
