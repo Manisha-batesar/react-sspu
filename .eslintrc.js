@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
+    'react-hooks/exhaustive-deps': 'warn',
     'react/jsx-props-no-spreading': 'off',
     'no-shadow': 'off',
     'react/no-array-index-key': 'off',

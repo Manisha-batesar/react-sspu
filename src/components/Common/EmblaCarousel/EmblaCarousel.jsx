@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import React, { useCallback } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import { DotButton, useDotButton } from './EmblaCarouselDotButtons'
 import './embla.css';
 
 const EmblaCarousel = (props) => {
-  const { slides, options } = props
+  const { slides, options, onSlideChange } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
   const onNavButtonClick = useCallback((emblaApi) => {
@@ -19,7 +19,17 @@ const EmblaCarousel = (props) => {
         : autoplay.stop
 
     resetOrStop()
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    if(emblaApi){
+      if (emblaApi) emblaApi.on('slidesInView', onSlideChange)
+    }
+
+    return () => {
+      if (emblaApi) emblaApi.off('slidesInView', onSlideChange)
+    }
+  }, [emblaApi]);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
     emblaApi,

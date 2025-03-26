@@ -8,6 +8,8 @@ import React from 'react';
 import './Testimonial.css';
 import EmblaCarousel from '../Common/EmblaCarousel/EmblaCarousel';
 
+const testimonialImages = [testimonialimg1, testimonialimg2, testimonialimg3, testimonialimg4, testimonialimg5];
+
 const reviewContent = `This (BSc in Beauty and Wellness) degree is very unique in itself as it provides Makeup, Hair,
 Skin and wellness vertical altogether and only Symbiosis Skills and Professional University is
 providing this unique kind of degree, here they mostly focused on the skills. The faculties also
@@ -36,6 +38,7 @@ return  <div className='cardDiv'>
 }
 
 const Testimonial = () => { 
+  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
   const carouselSlides = cards.map((card, index) => {
     return (
       <ReviewCardItem key={index} review={card.reviewContent} title={card.title}
@@ -43,10 +46,16 @@ const Testimonial = () => {
     )
   });
 
+  const onSlideChange = (emblaApi) => {
+    const inViewSlides = emblaApi.slidesInView();
+    const currentSlide = inViewSlides[1] ?? inViewSlides[0];
+    setCurrentSlideIndex(currentSlide);
+  }
+
   return (
     <section className='reviewContainer'>
-     <EmblaCarousel options={{ direction: 'rtl', loop: true  }} slides={carouselSlides}/>
-      <img src={testimonialimg1} alt="testimonial" className='imgDiv'/>
+     <EmblaCarousel options={{ direction: 'rtl', loop: true  }} slides={carouselSlides} onSlideChange={onSlideChange}/>
+      <img src={testimonialImages[currentSlideIndex]} alt="testimonial" className='imgDiv'/>
     </section>
   )
 }
