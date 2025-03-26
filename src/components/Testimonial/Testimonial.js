@@ -6,6 +6,7 @@ import React from 'react';
  import testimonialimg5 from '../../assets/testimonial5.png';
 
 import './Testimonial.css';
+import EmblaCarousel from '../Common/EmblaCarousel/EmblaCarousel';
 
 const reviewContent = `This (BSc in Beauty and Wellness) degree is very unique in itself as it provides Makeup, Hair,
 Skin and wellness vertical altogether and only Symbiosis Skills and Professional University is
@@ -25,15 +26,26 @@ const cards = [
   { img: testimonialimg4,reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
   { img: testimonialimg5,reviewContent, title: '-Mitali Sahu: BSc Beauty and Wellness (2018-2021)' },
 ]
+
+const ReviewCardItem = ({review, title}) => {
+return  <div className='cardDiv'>
+<p> {review}</p>
+<br/>
+ <span>{title}</span>
+</div>
+}
+
 const Testimonial = () => { 
-  
+  const carouselSlides = cards.map((card, index) => {
+    return (
+      <ReviewCardItem key={index} review={card.reviewContent} title={card.title}
+      />
+    )
+  });
+
   return (
     <section className='reviewContainer'>
-      <div className='cardDiv'>
-       <p> {reviewContent}</p>
-       <br/>
-        <span>-Mitali Sahu: BSc Beauty and Wellness (2018-2021)</span>
-      </div>
+     <EmblaCarousel options={{ direction: 'rtl', loop: true  }} slides={carouselSlides}/>
       <img src={testimonialimg1} alt="testimonial" className='imgDiv'/>
     </section>
   )

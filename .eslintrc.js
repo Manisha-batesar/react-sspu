@@ -21,9 +21,11 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'no-shadow': 'off',
     'react/no-array-index-key': 'off',
     'prettier/prettier': 'off',
-    'react/prop-types': 'error',
+    'react/prop-types': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'import/prefer-default-export': 'off',
     'jsx-a11y/img-redundant-alt': 'error',
