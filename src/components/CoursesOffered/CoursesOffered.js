@@ -14,9 +14,9 @@ const CoursesOffered = () => {
         <div className='courseContent'>
 
           <div className='offeredCourses'>
-            <span>BSc. Beauty & Wellness</span>
-            <span>BSc.Nutritional Sciences & Diabetics</span>
-            <span>MSc.Nutritional Sciences & Diabetics</span>
+          <button type="button">BSc. Beauty &<br /> Wellness</button>
+            <button type="button">BSc.Nutritional <br />Sciences & Diabetics</button>
+            <button type="button">MSc.Nutritional <br />Sciences & Diabetics</button>
           </div>
           <div className='skillContent'>
             <p>Symbiosis Skills & Professional University, in collaboration with

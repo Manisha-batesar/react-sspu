@@ -5,6 +5,7 @@ import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
 import './styles/global.css';
 import Testimonial from './components/Testimonial/Testimonial';
 import CouesesOffered from './components/CoursesOffered/CoursesOffered';
+import CareerOpportunities from './components/CareerOpportunities/CareerOpportunities';
 
 const App = () => (
   <>
@@ -13,6 +14,7 @@ const App = () => (
     <WhyChooseUs />
     <Testimonial />
    <CouesesOffered />
+   <CareerOpportunities />
   </>
 );
 
