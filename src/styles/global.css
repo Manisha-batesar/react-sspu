@@ -1,8 +1,8 @@
 :root {
-  --red-color: rgb(175, 34, 34);
-  --black-color: black;
-  --white-color: rgba(255, 255, 255, 0.895);
-  --gray-color: rgba(171, 171, 171, 1);
+  --red-color: #E31E24;
+  --black-color:#000000;
+  --white-color:#ffffff;
+  --gray-color:#727273;
 }
 
 * {

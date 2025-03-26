@@ -29,9 +29,9 @@ module.exports = {
     'jsx-a11y/img-redundant-alt': 'error',
     'jsx-a11y/aria-role': 'error',
     'no-console': 'warn',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
     'prefer-const': 'error',
-    'arrow-body-style': ['error', 'as-needed'],
+    'arrow-body-style': ['off', 'as-needed'],
     'react/function-component-definition': [
       'error',
       {

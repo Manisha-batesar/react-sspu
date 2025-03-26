@@ -1,0 +1,48 @@
+.reviewContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+
+} 
+
+.cardDiv{
+  width: 100%;
+  max-width: 775px;
+  border-radius: 11px;
+  line-height: 192%;
+  font-style: italic;
+  box-shadow: 1px 1px 13px 1px rgba(0,0,0,0.1);
+  padding: 30px ;
+  margin: 10px;
+  
+p{
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 192%;
+}
+
+  span{
+    font-weight: bold;
+  }
+}
+
+.imgDiv{
+  max-width: 389px;
+  height: 504px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px){
+  .reviewContainer{
+flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .imgDiv{
+    display: none;
+  }
+}
