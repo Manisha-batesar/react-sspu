@@ -6,6 +6,7 @@ import './styles/global.css';
 import Testimonial from './components/Testimonial/Testimonial';
 import CouesesOffered from './components/CoursesOffered/CoursesOffered';
 import CareerOpportunities from './components/CareerOpportunities/CareerOpportunities';
+import CampusTour from './components/CampusTour/CampusTour';
 
 const App = () => (
   <>
@@ -15,6 +16,7 @@ const App = () => (
     <Testimonial />
    <CouesesOffered />
    <CareerOpportunities />
+   <CampusTour />
   </>
 );
 

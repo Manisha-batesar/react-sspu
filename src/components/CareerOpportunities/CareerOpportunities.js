@@ -1,7 +1,6 @@
 import React from 'react'
 import './CareerOpportunities.css';
-import VectorOne from '../../assets/vector1.png'; 
-import VectorTwo from '../../assets/Vector2.png';
+import Vector from '../../assets/vector.png'; 
 import healthAndBeauty from '../../assets/logo-1.png';
 import handShake from '../../assets/handshake.png';
 import face from '../../assets/face_3.png';
@@ -22,19 +21,18 @@ const CareerOpportunities = () => {
          {/* second content */}
          <div className='leftContent'>
           <img src={handShake} alt='logoImage'/>
-          <p>Partnerships with salons, spas, beauty brands</p>
+          <p>Jobs and career paths after graduation</p>
          </div>
           {/* third content */}
           <div className='leftContent'>
           <img src={face} alt='logoImage'/>
-          <p>Partnerships with salons, spas, beauty brands</p>
+          <p>nternship or externship programs</p>
          </div>
 
         </div>
 
         <div className='right'> 
-          <img src={VectorOne} alt='logo-image1' className='imageOne'/>
-          <img src={VectorTwo} alt='logo-image2' className='imageTwo'/>
+          <img src={Vector} alt='logo-image1' className='imageOne'/>
         </div>
       </div>
     </div>
