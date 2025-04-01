@@ -1,8 +1,9 @@
 .container{
   margin: 25px;
   h2{
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
+    font-weight: bolder;
   }
 }
 
@@ -20,8 +21,9 @@
 .leftContent{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: start;
+  gap: 40px;
+  margin-bottom: 40px;
 
   img{
    width: 33px;
@@ -30,7 +32,7 @@
 }
 
 .right{
-  align-items: center;
+    align-items: center;
     justify-content: center;
   img{
     width: 320px;  

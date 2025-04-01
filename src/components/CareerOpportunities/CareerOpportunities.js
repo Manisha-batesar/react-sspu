@@ -9,7 +9,7 @@ import face from '../../assets/face_3.png';
 const CareerOpportunities = () => {
   return (
     <div className='container'>
-      <h2>Career Opportunities and Industry Connections</h2>
+      <h2>Career Opportunities And Industry Connections</h2>
  
       <div className='careerContainer'>
         <div className='left'>
