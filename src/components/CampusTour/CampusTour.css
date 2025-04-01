@@ -6,20 +6,20 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  
+   position: relative;
   }
 }
 
 .campusimage {
   .campusContent {
+   
+   position: absolute;
     .leftContent {
-    
- 
-
+   
    p{
     font-size: 24px;
     font-weight: bolder;
-    color: var(--white-color);
+  
 
    }
     button {
@@ -46,7 +46,10 @@
   }
 
     .rightContent {
+     
       .content {
+        top: -100px;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -54,8 +57,8 @@
         
         background: linear-gradient(to right , #b52323,#7d0202);
          border-radius: 12px;
-         width: 100%;
-        max-width: 600px;
+     
+        max-width: 550px;
       }
 
       p {
