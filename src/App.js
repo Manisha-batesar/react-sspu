@@ -8,6 +8,7 @@ import CouesesOffered from './components/CoursesOffered/CoursesOffered';
 import CareerOpportunities from './components/CareerOpportunities/CareerOpportunities';
 import CampusTour from './components/CampusTour/CampusTour';
 import AdmissionProcess from './components/AdmissionProcess/AdmissionProcess';
+import Scholarship from './components/Scholarship/Scholarship';
 
 const App = () => (
   <>
@@ -19,6 +20,7 @@ const App = () => (
    <CareerOpportunities />
    <CampusTour />
    <AdmissionProcess />
+   <Scholarship />
   </>
 );
 

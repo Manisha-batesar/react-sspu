@@ -1,0 +1,201 @@
+.mainContainer{
+  text-align: center;
+ 
+  h2{
+  font-size: 28px;
+  font-weight: 800;
+ 
+ }}
+
+.AdmissionProcessContainer{
+ margin: 40px;
+ background-color: var(--white-color);
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ align-items: center;
+ justify-content: center;
+ padding: 20px 40px 20px 40px;
+
+ 
+
+.AdmissionProcessContent{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  height: 78px;
+  border-radius: 66px;
+  background-color:rgba(247, 247, 247, 1);
+  padding: 10px 40px 10px 40px;
+  margin-bottom: 30px;
+
+
+button{
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 155%;
+  cursor: pointer;
+
+}
+}
+
+.Requirements{
+  display: flex;
+
+  gap: 40px;
+  text-align: start;
+ .EligibilityCriteria{
+  h3{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+   p{
+ font-size: 14px;
+  }
+}
+
+.form{
+  display: grid;
+  gap: 20px;
+  .btnOne {
+    width: 200px;
+    height: 48px;
+    background-color: var(--red-color);
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+  
+    span {
+      font-size: 12px;
+      line-height: 100%;
+      font-weight: bold;
+      border-radius: 40px;
+      border: 2px solid var(--white-color);
+      margin-left: 30px;
+      padding: 1px 3px 1px 3px;
+    }
+  }
+  .btnTwo {
+    width: 200px;
+    height: 48px;
+    border: 2px solid var(--red-color);
+    color: var(--red-color);
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+  }
+}
+}
+.lastDate{
+  margin-top: 40px;
+  display: grid;
+  text-align: start;
+  gap: 10px;
+  p{
+    font-size: 18px;
+    font-weight: 800;
+  }
+  h1{
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--red-color);
+  }
+}
+
+
+/* css for step to apply in university */
+.stepContainer{
+  text-align: center;
+  h2{
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }}
+
+  .allStepsContainer {
+    position: relative;
+    hr{
+         
+      position: absolute;
+      width: 2px;
+      left: 62px;
+      top: 20px;
+      bottom: 0%;
+  
+    }  
+  }
+
+  .allStep{
+    display: flex;
+    padding: 20px 50px 20px 50px;
+    gap: 60px;
+    justify-content: start;
+    text-align: left;
+
+    button{
+      position: relative;
+      border: none;
+      border-radius: 40px;
+      min-height: 25px;
+      max-height: 25px;
+      min-width: 25px;
+      max-width: 25px;
+      color: var(--red-color);
+      background-color: var(--red-color);
+      /* display: block;
+      z-index: 100; */
+    
+      
+    }
+    h3{
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+
+      span{
+        font-size: 14px;
+        font-weight: 100;
+      }
+    }
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 700px){
+  .AdmissionProcessContainer{
+  margin: 40px 10px 40px 10px ;
+  padding: 20px 10px 20px 10px;
+  .AdmissionProcessContent{
+    padding: 10px;
+    button  {
+    font-size: 8px;
+  }
+}
+.Requirements{
+ flex-wrap: wrap;
+}
+.allStep{
+  h3{
+    font-size: 14px;
+
+    span{
+      font-size: 10px;
+    }
+  }
+}
+
+}
+}
+
