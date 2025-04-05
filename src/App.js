@@ -9,6 +9,7 @@ import CareerOpportunities from './components/CareerOpportunities/CareerOpportun
 import CampusTour from './components/CampusTour/CampusTour';
 import AdmissionProcess from './components/AdmissionProcess/AdmissionProcess';
 import Scholarship from './components/Scholarship/Scholarship';
+import ApplyNow from './components/ApplyNow/ApplyNow';
 
 const App = () => (
   <>
@@ -21,6 +22,7 @@ const App = () => (
    <CampusTour />
    <AdmissionProcess />
    <Scholarship />
+   <ApplyNow />
   </>
 );
 
