@@ -55,7 +55,7 @@
 
 .faq-divider {
   height: 1px;
-  background-color: var(--secondary-gray-3);
+  background-color: rgba(34, 34, 37, 0.348);
   margin: 0.5rem 0;
 }
 
@@ -69,6 +69,7 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
+  font-weight: bolder;
   transition: background-color 0.3s ease;
 }
 

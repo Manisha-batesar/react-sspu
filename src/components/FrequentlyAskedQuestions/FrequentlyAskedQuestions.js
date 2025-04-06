@@ -4,7 +4,7 @@ import './FrequentlyAskedQuestions.css';
 
 
 const FrequentlyAskedQuestions = () => {
-  const [openItems, setOpenItems] = useState({});
+  const [openItems, setOpenItems] = useState({0: true});
   const [displayCount, setDisplayCount] = useState(5);
 
   const faqData = [
@@ -88,11 +88,11 @@ const FrequentlyAskedQuestions = () => {
       </div>
       {displayCount < faqData.length ? (
         <button type='button' onClick={loadMore} className="load-more-button">
-          Load More Questions
+         👉 Load More Questions
         </button>
       ) : (
         <button type='button' disabled className="load-more-button disabled">
-          No More Questions
+          🙊 No More Questions
         </button>
       )}
     </div>

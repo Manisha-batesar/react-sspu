@@ -7,6 +7,7 @@
 } 
 
 .cardDiv{
+
   width: 100%;
   max-width: 775px;
   border-radius: 11px;
@@ -17,10 +18,12 @@
   margin: 10px;
   
 p{
+  text-align: left;
   font-weight: 300;
   font-style: italic;
   font-size: 16px;
   line-height: 192%;
+  
 }
 
   span{
@@ -43,5 +46,10 @@ p{
 @media screen and (max-width: 768px){
   .imgDiv{
     display: none;
+  }
+  .cardDiv{
+  p{
+    font-size: 12px;
+  }
   }
 }
