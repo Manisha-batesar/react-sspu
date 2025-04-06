@@ -5,6 +5,12 @@
   --slide-spacing: 1rem;
   --slide-size: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .embla {
+    max-width: 80vw;
+  }
+}
 .embla__viewport {
   overflow: hidden;
 }
@@ -30,12 +36,19 @@
   user-select: none;
 }
 .embla__controls {
-  display: grid;
+  display: flex;
   grid-template-columns: auto 1fr;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.2rem;
   margin-top: 1.8rem;
 }
+
+/* @media screen and (max-width: 768px) {
+  .embla__controls {
+    display: flex;
+    justify-content: center;
+  } 
+ } */
 .embla__dots {
   display: flex;
   flex-wrap: wrap;

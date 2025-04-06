@@ -4,7 +4,6 @@
   align-items: center;
   gap: 10px;
   padding: 20px;
-
 } 
 
 .cardDiv{
@@ -37,7 +36,7 @@ p{
 
 @media screen and (max-width: 1024px){
   .reviewContainer{
-flex-wrap: wrap;
+   flex-wrap: wrap;
   }
 }
 
