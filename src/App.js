@@ -23,8 +23,8 @@ const App = () => (
    <CampusTour />
    <AdmissionProcess />
    <Scholarship />
-   <ApplyNow />
    <FrequentlyAskedQuestions />
+   <ApplyNow />
   </>
 );
 
