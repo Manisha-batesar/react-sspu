@@ -10,6 +10,7 @@ import CampusTour from './components/CampusTour/CampusTour';
 import AdmissionProcess from './components/AdmissionProcess/AdmissionProcess';
 import Scholarship from './components/Scholarship/Scholarship';
 import ApplyNow from './components/ApplyNow/ApplyNow';
+import FrequentlyAskedQuestions from './components/FrequentlyAskedQuestions/FrequentlyAskedQuestions';
 
 const App = () => (
   <>
@@ -23,6 +24,7 @@ const App = () => (
    <AdmissionProcess />
    <Scholarship />
    <ApplyNow />
+   <FrequentlyAskedQuestions />
   </>
 );
 
