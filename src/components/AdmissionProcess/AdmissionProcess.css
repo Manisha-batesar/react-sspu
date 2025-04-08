@@ -32,16 +32,22 @@
 
 
 button{
+  padding: 25px 20px;
   background: none;
   border: none;
   font-size: 14px;
   font-weight: 300;
   line-height: 155%;
+  border-radius: 40px;
+  font-weight: 900;
   cursor: pointer;
-
+}
+button.active{
+  background-color: #ffffff;
+  color: var(--red-color);
+  transition: all 0.3s ease-in-out;
 }
 }
-
 .Requirements{
   display: flex;
 
