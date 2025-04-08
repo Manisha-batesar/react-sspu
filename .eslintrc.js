@@ -23,6 +23,7 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'react-hooks/exhaustive-deps': 'warn',
     'react/jsx-props-no-spreading': 'off',
+   'jsx-a11y/label-has-associated-control':'off',
     'no-shadow': 'off',
     'react/no-array-index-key': 'off',
     'prettier/prettier': 'off',

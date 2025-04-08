@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import headerLogo from '../../assets/icon1.png';
 import './Header.css';
 
-const Header = () => {
+const Header = ({toggleApplyForm = () => {}}) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -46,7 +46,7 @@ const Header = () => {
               <a href="#">🔍</a>
             </li>
             <li className="cta-button-container">
-              <button className="cta-button" type="button">
+              <button className="cta-button" type="button" onClick={toggleApplyForm}>
                 Enroll Now
               </button>
             </li>
@@ -96,7 +96,7 @@ const Header = () => {
             <a href="#">🔍</a>
           </li>
           <li className="cta-button-container">
-            <button className="cta-button" type="button">
+            <button className="cta-button" type="button" onClick={toggleApplyForm}>
               Enroll Now
             </button>
           </li>

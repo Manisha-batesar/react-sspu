@@ -38,7 +38,7 @@ button{
   font-weight: 300;
   cursor: pointer;
   border-radius: 40px;
-
+font-weight: 900;
 }
 button.active{
   background-color: #ffffff;
