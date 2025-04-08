@@ -1,8 +1,12 @@
 import React from 'react'
 import './CoursesOffered.css';
-import studentSalon from '../../assets/image3.png';
+import studentSalon1 from '../../assets/image7.png';
+import studentSalon2 from '../../assets/formImage.jpg';
+
+import OfferedCourses from './components/OfferedCourses';
 
 const CoursesOffered = () => {
+  const [activeButton, setActiveButton] = React.useState(0);
   return (
 
     <div className='Container'>
@@ -11,26 +15,31 @@ const CoursesOffered = () => {
 
       <div className='courseContainer'>
 
-        <div className='courseContent'>
-
+      
+         <div className='btnContent'>
           <div className='offeredCourses'>
-          <button type="button">BSc. Beauty &<br /> Wellness</button>
-            <button type="button">BSc.Nutritional <br />Sciences & Diabetics</button>
-            <button type="button">MSc.Nutritional <br />Sciences & Diabetics</button>
+                                     
+          <button type="button" className={`${activeButton === 0 ? 'active' : ''}`} onClick={()=>{
+            setActiveButton(0)
+             }}>BSc. Beauty &<br /> Wellness</button>
+            <button type="button" className={`${activeButton === 1 ? 'active' : ''}`} onClick={()=>{
+            setActiveButton(1)
+            }}>BSc.Nutritional <br />Sciences & Diabetics</button>
+            <button type="button" className={`${activeButton === 2 ? 'active' : ''}`} onClick={()=>{
+            setActiveButton(2)
+            }}>MSc.Nutritional <br />Sciences & Diabetics</button>
           </div>
-          <div className='skillContent'>
-            <p>Symbiosis Skills & Professional University, in collaboration with
-              Enrich Salons & Academy, brings you a world-class Training Academy on campus. Designed as
-              per CIDESCO standards, our state-of-the-art labs and live work environment offer hands-on
-              learning in Beauty, Wellness, and Aesthetics.</p>
           </div>
+       
+         
 
-        </div>
-        <div className='courseImage'>
-          <img src={studentSalon} alt='courseImage' />
-        </div>
+{activeButton === 0 ?   <OfferedCourses /> : ''}
+{activeButton === 1 ?    <OfferedCourses image={studentSalon1}/> : ''}
+{activeButton === 2 ?     <OfferedCourses image={studentSalon2}/> : ''}
+  
+   
 
-      </div>
+    </div>
     </div>
 
   )

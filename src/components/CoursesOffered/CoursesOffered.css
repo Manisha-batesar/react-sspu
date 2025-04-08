@@ -1,5 +1,6 @@
 .Container{
   margin-top: 25px;
+  margin-bottom: 80px;
   h2{
     font-size: 24px;
     text-align: center;
@@ -7,15 +8,14 @@
 }
 
 .courseContainer{
-  display: flex;
   padding: 20px; 
   justify-content: center;
- gap: 20px;
+  gap: 20px;
 }
 
-.courseContent{
- padding-right: 40px;
 
+.btnContent{
+ 
 .offeredCourses{
   display: flex;
   align-items: center;
@@ -31,16 +31,31 @@
 
 
 button{
+  padding: 15px 10px;
   background: none;
   border: none;
-  font-size: 14px;
+  font-size: 14px;  
   font-weight: 300;
   line-height: 155%;
   cursor: pointer;
+  border-radius: 40px;
 
 }
+button.active{
+  background-color: #ffffff;
+  color: var(--red-color);
+  transition: all 0.3s ease-in-out;
+}
+}
 }
 
+.aboutCourses{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+.skillContent{
+  padding: 10px;
 p{
   max-width: 563px;
   width: 100%;
@@ -51,20 +66,17 @@ p{
    color: var(--black-color);
    padding: 10px;
 }
-
 }
-
-
-
 .courseImage{ 
   max-width: 470px;
   width: 100%;
   img{
   max-width: 472px;
   width: 100%;
-  max-height: 470px;
+  max-height: 250px;
   object-fit: cover;
   }
+}
 }
 
 @media screen and (max-width: 768px){
@@ -74,16 +86,15 @@ p{
     }
   }
   
-.courseContent{
+
 
   .offeredCourses{
     button  {
       font-size: 9px;
     }
   }
-}
 
-  .courseContent{
+  .skillContent{
     p{
       font-size: 12px;
     }
@@ -94,6 +105,11 @@ p{
 @media screen and (max-width: 910px){
   .courseContainer{
     flex-wrap: wrap;
+  }
+  
+  .aboutCourses{
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
