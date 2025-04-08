@@ -7,6 +7,24 @@
   }
 }
 
+.leftContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.leftContent img {
+  width: 40px;
+  height: 40px;
+}
+
+.leftContent p {
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
 .careerContainer{
   display: flex;
   align-items: center;
