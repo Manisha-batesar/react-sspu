@@ -1,9 +1,9 @@
 import React from 'react'
-import './ApplyNow.css'
+import './Footer.css'
 import formImage from '../../assets/formImage.jpg'
 import logoImage from '../../assets/icon1.png'
 
-const ApplyNow = () => {
+const Footer = () => {
   return (
 
     <div className='ApplyNowContainer'>
@@ -72,4 +72,6 @@ const ApplyNow = () => {
   )
 }
 
-export default ApplyNow
+export default Footer
+
+
