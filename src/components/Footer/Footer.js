@@ -54,7 +54,7 @@ const Footer = () => {
 
         <div className='psychologicalDivision'>
           <div className='counsellor-detailss'>
-            <h4>PsyCHological Counsellor Details</h4>
+            <h4 style={{color:'red', fontSize:'30spx'}}>Psychological Counsellor Details</h4>
             <p>Timings: 9 am to 5 pm;
               Monday, Wednesday and Friday</p>
             <h6>Location: Health Center, SSPU Kiwale</h6>
