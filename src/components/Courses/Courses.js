@@ -2,16 +2,14 @@ import React from 'react';
 import beautyIcon from '../../assets/logo-1.png';
 import geneticsIcon from '../../assets/logo-2.png';
 import schoolIcon from '../../assets/logo-3.png';
+import homeImage from '../../assets/image1.png';
 import './Courses.css';
 
 const Courses = () => (
   <div>
     <div className="home">
       <div className="home-img">
-        <img
-          src="https://s3-alpha-sig.figma.com/img/8007/2042/7a26079240a11e703fda1e77f9ea0a0d?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=L0U0T4zUcGFt~A1FEUs9JViQMfH5m57GCoz9Ww~MxDTfUCyr3njYMou9bBJwo~5GTrdCKjLc-FnMFiv7~VzYBj1wLobmdNQIB0Jaq1m7Q~QqomkVkPuk7ecul00kOmozt5EWhlYwh7lpun4GprZR3r~-yiBKs3OE5uoTiDTQtBjytvgHG5PomBuLEWiII~Kg0QN89UsnbcDGtZjs-iCSV6icD6Fs-fW0QAX3ySQiMQYujhyiU6tVbEBgxh1Pj1GQ3Qsj6DoZ381CxBpgAQm8QVzsV5vtOGGmpigUiUIp6~LcPolr5qgQ1VtoYKITAU-omSrIT6du90rdkmt4c0GpwQ__"
-          alt=""
-        />
+        <img  src={homeImage} alt='homeImage'/>
 
         {/* home content */}
         <div className="home-content">
